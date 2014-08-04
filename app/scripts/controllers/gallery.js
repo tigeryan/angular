@@ -10,10 +10,8 @@
 angular.module('angularApp')
   .controller('GalleryCtrl', function ($scope) {
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.gallery_list = [
+        {'name':'USVTA','gallery_id':'1'},{'name':'Monster Truck','gallery_id':'2'},{'name':'Oval','gallery_id':'3'}
     ];
 
 
