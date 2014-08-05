@@ -15,13 +15,13 @@ angular.module('angularApp')
         ];
         */
 
-        $scope.galleryList = {};
+        $scope.imageList = {};
         //console.log('here');
-        var responsePromise = $http.get('http://localhost:8600/test.cfc?method=getlist');
+        var responsePromise = $http.get('http://localhost:8600/test.cfc?method=getimages');
 
         responsePromise.success(function(data, status, headers, config) {
            // console.log('success: ' + data);
-            $scope.galleryList = data;
+            $scope.imageList = data;
            // console.log(data[0].gallery_id);
         });
         responsePromise.error(function(data, status, headers, config) {
