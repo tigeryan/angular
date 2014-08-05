@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/gallery.html',
         controller: 'GalleryCtrl'
       })
+      .when('/gallery/:id', {
+        templateUrl: 'views/gallery-images.html',
+        controller: 'GalleryListCtrl'
+      })
       .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'

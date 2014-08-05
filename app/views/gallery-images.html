@@ -1,0 +1,7 @@
+<h1>Gallery list</h1>
+
+<div class="container-fluid">
+    <div id="gallery-item" class="col-md-4 text-center" ng-repeat="images in imageList">
+         <a href="#/gallery/{{images.image_id}}"><img ng-src="{{images.image_name}}" style="width:200px;" /></a>
+    </div>
+</div>
