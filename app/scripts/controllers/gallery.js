@@ -17,7 +17,7 @@ angular.module('angularApp')
 
         $scope.galleryList = {};
         console.log('here');
-        var responsePromise = $http.get('http://localhost:8600/test.cfc?method=getlist2');
+        var responsePromise = $http.get('http://localhost:8600/test.cfc?method=getlist');
 
         responsePromise.success(function(data, status, headers, config) {
             console.log('success: ' + data);

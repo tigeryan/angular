@@ -2,25 +2,8 @@
 	<cfheader name="Access-Control-Allow-Origin" value="*" />
 	<cfheader name="Access-Control-Allow-Methods" value="GET,PUT,POST,DELETE" />
 	<cfheader name="Access-Control-Allow-Headers" value="Content-Type" />
-	
-	<cffunction name="getList" access="remote" returnformat="JSON" output="false" returns="query">
-		
-		<cfset getListQuery = QueryNew('gallery_id,gallery_name,cover_image') />
-		<cfset temp = QueryAddRow(getListQuery,3) />
-		<cfset temp = QuerySetCell(getListQuery,'gallery_id',1,1) />
-		<cfset temp = QuerySetCell(getListQuery,'gallery_name','USVTA',1) />
-		<cfset temp = QuerySetCell(getListQuery,'cover_image','images/1.jpg',1) />
-		<cfset temp = QuerySetCell(getListQuery,'gallery_id',2,2) />
-		<cfset temp = QuerySetCell(getListQuery,'gallery_name','Monster Truck',2) />
-		<cfset temp = QuerySetCell(getListQuery,'cover_image','images/2.jpg',2) />
-		<cfset temp = QuerySetCell(getListQuery,'gallery_id',3,3) />
-		<cfset temp = QuerySetCell(getListQuery,'gallery_name','Oval',3) />
-		<cfset temp = QuerySetCell(getListQuery,'cover_image','images/3.jpg',3) />
 
-		<cfreturn getListQuery />
-	</cffunction>
-
-	<cffunction name="getList2" access="remote" returnformat="JSON" output="false">
+	<cffunction name="getList" access="remote" returnformat="JSON" output="false">
 		
 		<cfset getListQuery = QueryNew('gallery_id,gallery_name,cover_image') />
 		<cfset temp = QueryAddRow(getListQuery,4) />
