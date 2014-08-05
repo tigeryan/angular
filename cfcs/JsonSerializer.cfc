@@ -3,7 +3,6 @@ component
 	hint = "I provide a way to serialize complext ColdFusion data values as case-sensitive JavaScript Object Notation (JSON) strings."
 	{
 
-	// I return the initialized component.
 	public any function init() {
 
 		// Every key is added to the full key list - used for one-time key serialization.
