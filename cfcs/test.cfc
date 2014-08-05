@@ -16,8 +16,7 @@
 		<cfset temp = QuerySetCell(getListQuery,'gallery_id',3,3) />
 		<cfset temp = QuerySetCell(getListQuery,'gallery_name','Oval',3) />
 		<cfset temp = QuerySetCell(getListQuery,'cover_image','images/3.jpg',3) />
-		
-		
+
 		<cfreturn getListQuery />
 	</cffunction>
 
