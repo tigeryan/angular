@@ -17,7 +17,7 @@ angular.module('angularApp')
 
         $scope.imageList = {};
         //console.log('here');
-        var responsePromise = $http.get('http://localhost:8600/cfcs/test.cfc?method=getimages');
+        var responsePromise = $http.get('http://beta.bodiesbybean.com/cfcs/bbb.cfc?method=getgallery');
 
         responsePromise.success(function(data, status, headers, config) {
            // console.log('success: ' + data);
