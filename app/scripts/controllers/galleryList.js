@@ -8,7 +8,7 @@
  * Controller of the angularApp
  */
 angular.module('angularApp')
-    .controller('GalleryListCtrl', function ($scope,$http) {
+    .controller('GalleryListCtrl', function ($scope,$routeParams, $http) {
         /*
         $scope.galleryList = [
             {'name':'USVTA','gallery_id':'1','cover_image':'images/1.jpg'},{'name':'Monster Truck','gallery_id':'2','cover_image':'images/2.jpg'},{'name':'Oval','gallery_id':'3','cover_image':'images/3.jpg'}
@@ -16,8 +16,9 @@ angular.module('angularApp')
         */
 
         $scope.imageList = {};
-        //console.log('here');
-        var responsePromise = $http.get('http://beta.bodiesbybean.com/cfcs/bbb.cfc?method=getgallery');
+		$scope.id = $routeParams.id;
+        console.log($routeParams);
+        var responsePromise = $http.get('http://beta.bodiesbybean.com/cfcs/bbb.cfc?method=getimages&partyid=' + $scope.id);
 
         responsePromise.success(function(data, status, headers, config) {
            // console.log('success: ' + data);
