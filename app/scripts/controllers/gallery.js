@@ -16,11 +16,11 @@ angular.module('angularApp')
         */
 
         $scope.galleryList = {};
-        //console.log('here');
+
         var responsePromise = $http.get('http://beta.bodiesbybean.com/cfcs/bbb.cfc?method=getgallery');
 
         responsePromise.success(function(data, status, headers, config) {
-            console.log('success: ' + data);
+            console.log(data);
             $scope.galleryList = data;
            // console.log(data[0].gallery_id);
         });

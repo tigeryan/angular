@@ -1,9 +1,8 @@
- <p>This is the gallery view.</p>
+ <p>BodiesByBean Galleries</p>
 
 <div class="container-fluid">
-    <div id="gallery-item" class="col-md-4 text-center" ng-repeat="gallery in galleryList">
-        <p>{{gallery.partyid}}</p>
-        <!---<h4><a href="#/gallery/{{gallery.gallery_id}}">{{gallery.gallery_name}}</a></h4>
-         <a href="#/gallery/{{gallery.gallery_id}}"><img ng-src="{{gallery.cover_image}}" style="width:200px;" /></a>--->
+    <div id="gallery-item" class="col-md-6 text-center" ng-repeat="gallery in galleryList">
+        <h4><a href="#/gallery/{{gallery.partyid}}">{{gallery.party_title}}</a></h4>
+         <a href="#/gallery/{{gallery.partyid}}"><img ng-src="{{gallery.thumb_image}}" /></a>
     </div>
 </div>
