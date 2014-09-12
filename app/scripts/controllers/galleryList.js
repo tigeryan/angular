@@ -15,19 +15,38 @@ angular.module('angularApp')
         ];
         */
 
+		$scope.myData = {
+			full_image: "",
+			modalShown: false,
+			party_title: "Gallery"
+		}
+
         $scope.imageList = {};
 		$scope.id = $routeParams.id;
-        console.log($routeParams);
+        //console.log($routeParams);
         var responsePromise = $http.get('http://beta.bodiesbybean.com/cfcs/bbb.cfc?method=getimages&partyid=' + $scope.id);
 
         responsePromise.success(function(data, status, headers, config) {
-           // console.log('success: ' + data);
             $scope.imageList = data;
-           // console.log(data[0].gallery_id);
+			//console.log($scope.imageList[0].party_title);
+			$scope.myData.party_title = $scope.imageList[0].party_title;
+            //console.log($scope);
         });
         responsePromise.error(function(data, status, headers, config) {
            console.log('AJAX failed!');
         });
+
+		$scope.logClose = function() {
+			console.log('close!');
+		};
+
+		$scope.toggleModal = function(full_image) {
+			$scope.myData.full_image = full_image;
+			$scope.myData.modalShown = !$scope.myData.modalShown;
+		};
+
+
+
 
   });
 

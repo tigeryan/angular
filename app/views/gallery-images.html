@@ -1,7 +1,22 @@
-<h1>Gallery list</h1>
+<h1>{{myData.party_title}}</h1>
 
 <div class="container-fluid">
-    <div id="gallery-item" class="col-md-4 text-center" ng-repeat="images in imageList">
-         <a href="#/gallery/{{images.imageid}}"><img ng-src="{{images.thumb_image}}" /></a>
+
+	<modal-dialog show='myData.modalShown' width='660px' dialog-title='' on-close='logClose()'>
+		<img src='{{myData.full_image}}' width='640px' ng-model='myData.full_image' ng-click='toggleModal("")' />
+	</modal-dialog>
+
+    <div id="gallery-item" class="col-md-4 text-center gallery-item" dir-paginate="images in imageList | itemsPerPage: 12" pagination-id="images">
+         <a href='' ng-click='toggleModal("{{images.full_image}}")'><img ng-src='{{images.thumb_image}}' class='gallery-item-image' /></a>
     </div>
+
+	<!--
+	<div id="gallery-item" class="col-md-4 text-center gallery-item" ng-repeat="images in imageList">
+         <a href='' ng-click='toggleModal("{{images.full_image}}")'><img ng-src='{{images.thumb_image}}' class='gallery-item-image' /></a>
+    </div>
+	-->
+
+	<dir-pagination-controls pagination-id="images"
+    </dir-pagination-controls>
+
 </div>
