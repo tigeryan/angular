@@ -1,12 +1,17 @@
-<h1>{{myData.party_title}}</h1>
+<h1>{{myData.partyTitle}}</h1>
 
 <div class="container-fluid">
 
 	<modal-dialog show='myData.modalShown' width='660px' dialog-title='' on-close='logClose()'>
-		<img src='{{myData.full_image}}' width='640px' ng-model='myData.full_image' ng-click='toggleModal("")' />
+		<img src='{{myData.fullImage}}' width='640px' ng-model='myData.fullImage' ng-click='toggleModal("")' />
 	</modal-dialog>
 
-    <div id="gallery-item" class="col-md-4 text-center gallery-item" dir-paginate="images in imageList | itemsPerPage: 12" pagination-id="images">
+	<dir-pagination-controls class="col-md-12 text-center">
+    </dir-pagination-controls>
+
+	<div class="clearfix"></div>
+
+    <div id="gallery-item" class="col-md-4 text-center gallery-item" dir-paginate="images in imageList | itemsPerPage: 12">
          <a href='' ng-click='toggleModal("{{images.full_image}}")'><img ng-src='{{images.thumb_image}}' class='gallery-item-image' /></a>
     </div>
 
@@ -16,7 +21,7 @@
     </div>
 	-->
 
-	<dir-pagination-controls pagination-id="images"
+	<dir-pagination-controls class="col-md-12 text-center">
     </dir-pagination-controls>
 
 </div>

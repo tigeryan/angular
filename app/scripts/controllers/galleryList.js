@@ -16,10 +16,10 @@ angular.module('angularApp')
         */
 
 		$scope.myData = {
-			full_image: "",
+			fullImage: '',
 			modalShown: false,
-			party_title: "Gallery"
-		}
+			partyTitle: 'Gallery'
+		};
 
         $scope.imageList = {};
 		$scope.id = $routeParams.id;
@@ -29,7 +29,7 @@ angular.module('angularApp')
         responsePromise.success(function(data, status, headers, config) {
             $scope.imageList = data;
 			//console.log($scope.imageList[0].party_title);
-			$scope.myData.party_title = $scope.imageList[0].party_title;
+			$scope.myData.partyTitle = $scope.imageList[0].party_title;
             //console.log($scope);
         });
         responsePromise.error(function(data, status, headers, config) {
@@ -40,8 +40,8 @@ angular.module('angularApp')
 			console.log('close!');
 		};
 
-		$scope.toggleModal = function(full_image) {
-			$scope.myData.full_image = full_image;
+		$scope.toggleModal = function(fullImage) {
+			$scope.myData.fullImage = fullImage;
 			$scope.myData.modalShown = !$scope.myData.modalShown;
 		};
 
