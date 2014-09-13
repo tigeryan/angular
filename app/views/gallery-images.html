@@ -6,6 +6,10 @@
 <div class="container-fluid">
 
 	<modal-dialog show='myData.modalShown' width='680px' dialog-title='' on-close='logClose()'>
+		<div class="row">
+			<div class="col-md-6">PREVIOUS</div>
+			<div class="col-md-6 pull-right">NEXT {{$index}}</div>
+		</div>
 		<img src='{{myData.fullImage}}' width='640px' ng-model='myData.fullImage' ng-click='toggleModal("")' class='gallery-item-image' />
 	</modal-dialog>
 

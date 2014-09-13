@@ -29,15 +29,20 @@
           <li ng-class="{ active: isActive('/about') }"><a ng-href="#/about">About</a></li>
           <li ng-class="{ active: isActive('/contact') }"><a ng-href="#/contact">Contact</a></li>
           <li ng-class="{ active: isActive('/gallery') }"><a ng-href="#/gallery">Gallery</a></li>
-
         </ul>
-        <h3 class="text-muted">Bodies <span class="glyphicon glyphicon-road"></span> By Bean</h3>
+        <h3 class="text-muted"><a ng-href="/">Bodies <span class="glyphicon glyphicon-road"></span> By Bean</a></h3>
       </div>
 
       <div ng-view="" class="mainView"></div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-copyright-mark"></span> 2014 BodiesByBean</p>
+      <div class="footer col-md-12">
+        <ul class="footer-nav">
+			<li><span class="glyphicon glyphicon-copyright-mark"></span> 2014 BodiesByBean</li>
+          	<li ng-class="{ active: isActive('/') }"><a ng-href="#">Home</a></li>
+          	<li ng-class="{ active: isActive('/about') }"><a ng-href="#/about">About</a></li>
+          	<li ng-class="{ active: isActive('/contact') }"><a ng-href="#/contact">Contact</a></li>
+          	<li ng-class="{ active: isActive('/gallery') }"><a ng-href="#/gallery">Gallery</a></li>
+        </ul>
       </div>
     </div>
 

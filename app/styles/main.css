@@ -5,8 +5,8 @@
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	font-family: Arial;
 }
 
@@ -14,14 +14,19 @@ body {
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .text-muted {
 	font-family: license-plate;
 	font-size: 32px;
 	padding-top:8px;
+}
+
+.text-muted a {
+	text-decoration: none;
+	color: black;
 }
 
 .nav-pills li {
@@ -32,7 +37,7 @@ body {
 
 /* Custom page header */
 .header {
-	border: 2px solid;
+	border: 2px solid #aaaaaa;
     border-radius: 10px;
 	background-color:#E3E8A9;
 	padding: 8px 8px 8px 8px;
@@ -58,12 +63,24 @@ body {
 	margin: 8px 8px 8px 8px;
 }
 
-
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  /*
+	padding-top: 19px;
+	color: #777;
+	border-top: 1px solid #e5e5e5;
+	*/
+	border: 2px solid #aaaaaa;
+    border-radius: 10px;
+	background-color:#E3E8A9;
+	padding: 8px 8px 8px 8px;
+	margin: 8px 8px 8px 8px;
+}
+
+.footer-nav li {
+	display:inline;
+	padding-right:12px;
+
 }
 
 /* Customize container */
@@ -115,6 +132,7 @@ body {
   background-color:#000000;
   opacity: 0.8;
 }
+
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   z-index:10000;
@@ -131,10 +149,12 @@ body {
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
 }
+
 .ng-modal-dialog-content {
-  padding:10px;
+  padding:14px;
   text-align: left;
 }
+
 .ng-modal-close {
   position: absolute;
   top: 3px;
@@ -152,11 +172,11 @@ body {
 .gallery-item {
 	min-height: 150px;
 }
+
 .gallery-item-image {
 	border: 1px solid black;
 	padding: 4px;
 	margin: 4px;
 }
-
 /* end gallery list */
 
