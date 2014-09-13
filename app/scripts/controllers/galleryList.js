@@ -37,7 +37,7 @@ angular.module('angularApp')
         });
 
 		$scope.logClose = function() {
-			console.log('close!');
+			//console.log('close!');
 		};
 
 		$scope.toggleModal = function(fullImage) {

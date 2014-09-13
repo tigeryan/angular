@@ -1,8 +1,28 @@
- <p>BodiesByBean Galleries</p>
+
+<div class="col-md-12">
+	<h1>BodiesByBean Galleries</h1>
+</div>
 
 <div class="container-fluid">
-    <div id="gallery-item" class="col-md-6 text-center" ng-repeat="gallery in galleryList">
-        <h4><a href="#/gallery/{{gallery.partyid}}">{{gallery.party_title}}</a></h4>
-         <a href="#/gallery/{{gallery.partyid}}"><img ng-src="{{gallery.thumb_image}}" /></a>
+    <div class="row" ng-repeat="(gIdx,gallery) in galleryList" ng-if="gIdx % 3 == 0">
+        <hr ng-if="gIdx !== 0" />
+        <div class="col-md-4" ng-repeat="elIdx in [0,1,2]" ng-if="galleryList[gIdx+elIdx]">
+			<h4><a href="#/gallery/{{galleryList[gIdx+elIdx].partyid}}">{{galleryList[gIdx+elIdx].party_title}}</a></h4>
+			<a href="#/gallery/{{galleryList[gIdx+elIdx].partyid}}"><img ng-src="{{galleryList[gIdx+elIdx].thumb_image}}" class='gallery-item-image' /></a>
+		</div>
     </div>
 </div>
+
+
+<!---
+<div class="container-fluid">
+    <div id="gallery-item" class="col-md-12" ng-repeat="gallery in galleryList">
+		<div class="row">
+			<div clas="col-md-4 text-center">
+        		<p><a href="#/gallery/{{gallery.partyid}}">{{gallery.party_title}}</a></p>
+				<a href="#/gallery/{{gallery.partyid}}"><img ng-src="{{gallery.thumb_image}}" class='gallery-item-image' /></a>
+			</div>
+		</div>
+    </div>
+</div>
+--->

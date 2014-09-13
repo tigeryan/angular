@@ -23,18 +23,18 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
+      <div class="header" ng-controller="NavCtrl">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/contact">Contact</a></li>
-          <li><a ng-href="#/gallery">Gallery</a></li>
+          <li ng-class="{ active: isActive('/') }"><a ng-href="#">Home</a></li>
+          <li ng-class="{ active: isActive('/about') }"><a ng-href="#/about">About</a></li>
+          <li ng-class="{ active: isActive('/contact') }"><a ng-href="#/contact">Contact</a></li>
+          <li ng-class="{ active: isActive('/gallery') }"><a ng-href="#/gallery">Gallery</a></li>
 
         </ul>
-        <h3 class="text-muted">BodiesByBean</h3>
+        <h3 class="text-muted">Bodies <span class="glyphicon glyphicon-road"></span> By Bean</h3>
       </div>
 
-      <div ng-view=""></div>
+      <div ng-view="" class="mainView"></div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-copyright-mark"></span> 2014 BodiesByBean</p>
@@ -78,13 +78,14 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/gallery.js"></script>
-        <script src="scripts/controllers/galleryList.js"></script>
-        <script src="scripts/controllers/contact.js"></script>
-        <!-- endbuild -->
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers/main.js"></script>
+	<script src="scripts/controllers/about.js"></script>
+	<script src="scripts/controllers/gallery.js"></script>
+	<script src="scripts/controllers/galleryList.js"></script>
+	<script src="scripts/controllers/contact.js"></script>
+	<script src="scripts/controllers/nav.js"></script>
+	<!-- endbuild -->
 </body>
 </html>

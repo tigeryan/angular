@@ -20,7 +20,7 @@ angular.module('angularApp')
         var responsePromise = $http.get('http://beta.bodiesbybean.com/cfcs/bbb.cfc?method=getgallery');
 
         responsePromise.success(function(data, status, headers, config) {
-            console.log(data);
+            //console.log(data);
             $scope.galleryList = data;
            // console.log(data[0].gallery_id);
         });
