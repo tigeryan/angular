@@ -27,8 +27,4 @@ angular.module('angularApp')
         responsePromise.error(function(data, status, headers, config) {
            console.log('AJAX failed!');
         });
-
-  });
-
-
-
+});
