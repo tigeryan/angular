@@ -8,29 +8,12 @@
  * Controller of the angularApp
  */
 angular.module('angularApp')
-
-	.filter('getByProperty', function() {
-		return function(propertyName, propertyValue, collection) {
-			var i=0, len=collection.length;
-			for (; i<len; i++) {
-				if (collection[i][propertyName] == +propertyValue) {
-					return collection[i];
-				}
-			}
-			return null;
-		}
-});
-
-
-    .controller('GalleryListCtrl', function ($scope,$routeParams, $http) {
+    .controller('GalleryListCtrl', function ($scope,$routeParams, $http, $filter) {
         /*
         $scope.galleryList = [
             {'name':'USVTA','gallery_id':'1','cover_image':'images/1.jpg'},{'name':'Monster Truck','gallery_id':'2','cover_image':'images/2.jpg'},{'name':'Oval','gallery_id':'3','cover_image':'images/3.jpg'}
         ];
         */
-
-
-
 
 		$scope.myData = {
 			fullImage: '',
@@ -58,13 +41,13 @@ angular.module('angularApp')
 			//console.log('close!');
 		};
 
-		$scope.nextModal = function(curImage) {
-			console.log(curImage);
-			$scope.myData.curImage = curImage;
-			console.log($scope.myData.curImage);
+		$scope.nextModal = function() {
+			console.log('myData.fullImage: ' + myData.fullImage);
+			//$scope.myData.curImage = curImage;
+			//console.log($scope.myData.curImage);
 
-
-
+			//var found = $filter('getByProperty')('full_image', nextImage, $scope.imageList);
+			//console.log(found);
 			//$scope.myData.fullImage = $scope.imageList[myIndex].full_image;
 			//$scope.myData.modalShown = !$scope.myData.modalShown;
 
@@ -73,14 +56,10 @@ angular.module('angularApp')
 		$scope.toggleModal = function(fullImage,myIndex) {
 			$scope.myData.myIndex = myIndex;
 			$scope.myData.fullImage = fullImage;
+			//$scope.myData.curImage = fullImage;
 			$scope.myData.modalShown = !$scope.myData.modalShown;
-			//console.log($scope.myData.myIndex);
+			console.log('fullImage: ' + fullImage);
 		};
-
-
-
-
-  });
-
+});
 
 

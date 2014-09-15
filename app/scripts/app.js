@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'ui.bootstrap',
 	'ngModal',
-	'angularUtils.directives.dirPagination'
+	'angularUtils.directives.dirPagination',
+	'filters'
   ])
   .config(function ($routeProvider) {
     $routeProvider
