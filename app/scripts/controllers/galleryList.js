@@ -41,16 +41,19 @@ angular.module('angularApp')
 			//console.log('close!');
 		};
 
+		$scope.prevModal = function() {
+			var found = $filter('getByProperty')('full_image', $scope.myData.fullImage, $scope.imageList);
+			if (found.currentrow != 1) {
+				$scope.myData.fullImage = $scope.imageList[found.currentrow-2].full_image;
+			}
+		};
+
+
 		$scope.nextModal = function() {
-			console.log('myData.fullImage: ' + myData.fullImage);
-			//$scope.myData.curImage = curImage;
-			//console.log($scope.myData.curImage);
-
-			//var found = $filter('getByProperty')('full_image', nextImage, $scope.imageList);
-			//console.log(found);
-			//$scope.myData.fullImage = $scope.imageList[myIndex].full_image;
-			//$scope.myData.modalShown = !$scope.myData.modalShown;
-
+			var found = $filter('getByProperty')('full_image', $scope.myData.fullImage, $scope.imageList);
+			if (found.currentrow != $scope.imageList.length) {
+				$scope.myData.fullImage = $scope.imageList[found.currentrow].full_image;
+			}
 		};
 
 		$scope.toggleModal = function(fullImage,myIndex) {
