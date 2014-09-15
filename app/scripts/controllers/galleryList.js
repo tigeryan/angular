@@ -23,15 +23,11 @@ angular.module('angularApp')
 
         $scope.imageList = {};
 		$scope.id = $routeParams.id;
-        //console.log($routeParams);
         var responsePromise = $http.get('http://beta.bodiesbybean.com/cfcs/bbb.cfc?method=getimages&partyid=' + $scope.id);
 
         responsePromise.success(function(data, status, headers, config) {
             $scope.imageList = data;
-			//console.log($scope.imageList.length);
-			//console.log($scope.imageList[0].party_title);
 			$scope.myData.partyTitle = $scope.imageList[0].party_title;
-            //console.log($scope);
         });
         responsePromise.error(function(data, status, headers, config) {
            console.log('AJAX failed!');
@@ -48,7 +44,6 @@ angular.module('angularApp')
 			}
 		};
 
-
 		$scope.nextModal = function() {
 			var found = $filter('getByProperty')('full_image', $scope.myData.fullImage, $scope.imageList);
 			if (found.currentrow != $scope.imageList.length) {
@@ -59,9 +54,7 @@ angular.module('angularApp')
 		$scope.toggleModal = function(fullImage,myIndex) {
 			$scope.myData.myIndex = myIndex;
 			$scope.myData.fullImage = fullImage;
-			//$scope.myData.curImage = fullImage;
 			$scope.myData.modalShown = !$scope.myData.modalShown;
-			console.log('fullImage: ' + fullImage);
 		};
 });
 
