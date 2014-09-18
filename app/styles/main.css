@@ -8,8 +8,6 @@
     src: url(fonts/desperado.ttf);
 }
 
-
-
 /* Space out content a bit */
 body {
 	padding-top: 20px;
@@ -26,7 +24,7 @@ body {
 }
 
 .text-muted {
-	font-family: license-plate;
+	font-family: desperado;
 	font-size: 32px;
 	padding-top:8px;
 }
@@ -96,6 +94,7 @@ body {
     max-width: 960px;
   }
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -187,3 +186,21 @@ body {
 }
 /* end gallery list */
 
+/* mobile friendliness */
+@media (max-width: 500px) {
+     .text-muted { font-size:18px; }
+    .nav-pills li {
+        font-size: 12px;
+	   font-family: Helvetica;
+	   padding-right: 4px;
+    }
+    .gallery-item {
+	   max-width:90%;
+       min-height:0px;
+    }
+    #modalImage {
+        width:300px;
+        text-align:center;
+        margin-left:80px
+    }
+}
