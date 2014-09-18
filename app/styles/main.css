@@ -3,6 +3,13 @@
     src: url(fonts/license-plate.ttf);
 }
 
+@font-face {
+    font-family: desperado;
+    src: url(fonts/desperado.ttf);
+}
+
+
+
 /* Space out content a bit */
 body {
 	padding-top: 20px;
