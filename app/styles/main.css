@@ -145,14 +145,14 @@ body {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-
+   max-height: 560px;
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
 }
 
 .ng-modal-dialog-content {
   padding:14px;
-  text-align: left;
+  text-align: center;
 }
 
 .ng-modal-close {
@@ -177,6 +177,8 @@ body {
 	border: 1px solid black;
 	padding: 4px;
 	margin: 4px;
+	max-width:640px;
+	max-height:490px;
 }
 /* end gallery list */
 
