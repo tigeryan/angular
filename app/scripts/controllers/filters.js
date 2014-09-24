@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('filters', []).
 	filter('getByProperty', function() {
     	return function(propertyName, propertyValue, collection) {
@@ -13,10 +15,10 @@ angular.module('filters', []).
 				//console.log('pName: ' + collection[i][propertyName]);
 				//console.log('pValue: ' + propertyValue);
 
-            	if (collection[i][propertyName] == propertyValue) {
+            	if (collection[i][propertyName] === propertyValue) {
                 	return collection[i];
 				}
 			}
         	return null;
-    	}
+    	};
 });

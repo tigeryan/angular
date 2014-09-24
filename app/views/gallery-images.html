@@ -9,7 +9,7 @@
 			<button class="btn" ng-click='prevModal()'>PREVIOUS</button>
 			<button class="btn" ng-click='nextModal()'>NEXT</button>
 		</div>
-		<img src='{{myData.fullImage}}'  ng-model='myData.fullImage' ng-click='toggleModal("{{myData.fullImage}}")' class='gallery-item-image' />
+		<img src='{{myData.fullImage}}' id="modalImage" width='640px' ng-model='myData.fullImage' ng-click='toggleModal("{{myData.fullImage}}")' class='gallery-item-image' />
 	</modal-dialog>
 
 	<dir-pagination-controls class="col-md-12 text-center"></dir-pagination-controls>
