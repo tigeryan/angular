@@ -5,7 +5,6 @@
  * @name angularApp.controller:ContactCtrl
  * @description
  * # ContactCtrl
- * Controller of the angularApp
  */
 angular.module('angularApp')
   .controller('ContactCtrl', function ($scope, $http) {
