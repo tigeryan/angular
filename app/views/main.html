@@ -1,9 +1,11 @@
 <div>
-  <h1>Welcome to BodiesByBean, your home for ultra-realistic lexan R/C body painting.</h1>
-  <p>Almost every part, of every body, that I produce is painted, with very, very few decals used. Being properly applied paint, the bodies I paint last longer then bodies that are done with paint and decals. </p>
-  <p>Below are a few of my recently completed bodies, enjoy! Click on Galleries to see many more bodies I have painted.</p>
+    <h1>Welcome to BodiesByBean, your home for ultra-realistic lexan R/C body painting.</h1>
+    <p>Almost every part, of every body, that I produce is painted, with very, very few decals used. Being properly applied paint, the bodies I paint last longer then bodies that are done with paint and decals. </p>
+    <p>Below are a few of my recently completed bodies, enjoy! Click on Galleries to see many more bodies I have painted.</p>
 
- <slider images="images"/>
+    <div class="container slider">
+        <img ng-repeat="slide in slides" class="slide" ng-src="{{slide.image}}">
+    </div>
 
 </div>
 
