@@ -27,14 +27,20 @@ angular.module('angularApp')
         };
 
         $scope.isCurrentSlideIndex = function (index) {
+            //console.log('isCurrentSlideIndex: ' + $scope.currentIndex == index + ' : ' + index + ' : ' + $scope.currentIndex);
+            console.log('index: ' + index);
+            console.log('currentIndex: ' + $scope.currentIndex);
+            console.log('test: ' + $scope.currentIndex === index);
             return $scope.currentIndex === index;
         };
 
         $scope.prevSlide = function () {
+            console.log('prev: ' + $scope.currentIndex +  ' : ' + $scope.slides.length);
             $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
         };
 
         $scope.nextSlide = function () {
+            console.log('next: ' + $scope.currentIndex);
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
         };
 
